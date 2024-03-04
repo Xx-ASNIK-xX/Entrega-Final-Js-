@@ -14,7 +14,7 @@ function validarLogin(event) {
         if (usuario.username === loginUsername && usuario.password === loginPassword) {
             alert('¡Inicio de sesión exitoso!');
             // Redirigir a la página de perfil o cualquier otra página después del login exitoso
-            window.location.href = '../pages/inicio.html';
+            window.location.href = '../pages/carrito.html';
         } else {
             intentosFallidos++; // Incrementar el contador de intentos fallidos
             if (intentosFallidos >= 3) {
