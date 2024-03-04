@@ -30,7 +30,7 @@ const productos = [
         precio: 40, 
         descripcion: "Esta es la descripción del producto 4.", 
         marca: "Marca 4", 
-        stock: 2
+        stock: 2                                                                                                                                        
     },
     { 
         id: 5, 
