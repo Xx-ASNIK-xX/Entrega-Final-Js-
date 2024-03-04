@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+
+.error {
+    color: red;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #346dd8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    font-family: Arial, sans-serif; /* Utiliza Arial como fuente principal y luego sans-serif como fuente genérica de tipo sans-serif */
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#totalCompra{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #2353ac;
+}
+
+.error {
+    color: red;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.carrito {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.eliminar-btn {
+    margin-left: 10px;
+}
