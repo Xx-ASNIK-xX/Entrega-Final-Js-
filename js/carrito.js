@@ -2,7 +2,7 @@
 const productos = [
     { 
         id: 1, 
-        nombre: "camaras de seguridad", 
+        nombre: "Macbook", 
         precio: 10, 
         descripcion: "Esta es la descripción del producto 1.", 
         marca: "Marca 1", 
@@ -10,34 +10,34 @@ const productos = [
     },
     { 
         id: 2, 
-        nombre: "Producto 2", 
+        nombre: "Notebook", 
         precio: 20, 
         descripcion: "Esta es la descripción del producto 2.", 
-        marca: "Marca 2", 
+        marca: "HP", 
         stock: 3
     },
     { 
         id: 3, 
-        nombre: "Producto 3", 
+        nombre: "Mause", 
         precio: 30, 
         descripcion: "Esta es la descripción del producto 3.", 
-        marca: "Marca 3", 
+        marca: "Logitech", 
         stock: 4
     },
     { 
         id: 4, 
-        nombre: "Producto 4", 
+        nombre: "Teclado", 
         precio: 40, 
         descripcion: "Esta es la descripción del producto 4.", 
-        marca: "Marca 4", 
+        marca: "Logitech", 
         stock: 2                                                                                                                                        
     },
     { 
         id: 5, 
-        nombre: "Producto 5", 
+        nombre: "Monitor", 
         precio: 50, 
         descripcion: "Esta es la descripción del producto 5.", 
-        marca: "Marca 5", 
+        marca: "Samsung", 
         stock: 5
     }
 ];
