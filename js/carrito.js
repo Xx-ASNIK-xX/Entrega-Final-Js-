@@ -61,6 +61,7 @@ function mostrarProductos() {
     });
 }
 
+
 // Función para agregar un producto al carrito con una cierta cantidad
 function agregarAlCarrito(id) {
     const cantidadInput = document.getElementById(`cantidad-${id}`);
