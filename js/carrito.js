@@ -6,7 +6,8 @@ const productos = [
         precio: 10, 
         descripcion: "Esta es la descripción del producto 1.", 
         marca: "Marca 1", 
-        stock: 11
+        stock: 11,
+        imagen: "../img/mac.jpg"
     },
     { 
         id: 2, 
@@ -14,7 +15,8 @@ const productos = [
         precio: 20, 
         descripcion: "Esta es la descripción del producto 2.", 
         marca: "HP", 
-        stock: 3
+        stock: 3,
+        imagen: "../img/notebook.jpg"
     },
     { 
         id: 3, 
@@ -22,7 +24,8 @@ const productos = [
         precio: 30, 
         descripcion: "Esta es la descripción del producto 3.", 
         marca: "Logitech", 
-        stock: 4
+        stock: 4,
+        imagen: "../img/mause.jpg"
     },
     { 
         id: 4, 
@@ -30,7 +33,8 @@ const productos = [
         precio: 40, 
         descripcion: "Esta es la descripción del producto 4.", 
         marca: "Logitech", 
-        stock: 2                                                                                                                                        
+        stock: 2,
+        imagen: "../img/teclado.jpg"                                                                                                                                      
     },
     { 
         id: 5, 
@@ -38,7 +42,8 @@ const productos = [
         precio: 50, 
         descripcion: "Esta es la descripción del producto 5.", 
         marca: "Samsung", 
-        stock: 5
+        stock: 5,
+        imagen: "../img/monitor.jpg"
     }
 ];
 
@@ -52,6 +57,7 @@ function mostrarProductos() {
         productoDiv.classList.add("producto");
         productoDiv.innerHTML = `
             <h3>${producto.nombre}</h3>
+            <img src="${producto.imagen}" alt="${producto.nombre}">
             <p>Precio: $${producto.precio}</p>
             <p>Stock: ${producto.stock}</p>
             <input type="number" id="cantidad-${producto.id}" min="1" max="${producto.stock}" value="1" onchange="validarCantidad(${producto.id})">

@@ -60,7 +60,7 @@
        document.getElementById('registroForm').reset();
 
        // Redirigir a la página de login
-       window.location.href = '/pages/login.html';
+       window.location.href = './pages/login.html';
    }
 
    // Agregar evento submit al formulario
