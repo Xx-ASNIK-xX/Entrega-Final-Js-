@@ -3,8 +3,8 @@ const productos = [
     { 
         id: 1, 
         nombre: "Macbook", 
-        precio: 10, 
-        descripcion: "Esta es la descripción del producto 1.", 
+        precio: 1200, 
+        descripcion: "Pantalla: de 13.3 pulgadas <br> procesador: Apple M1 8-Core GPU de 3.1 GHz <br> memoria: 8 GB DDR3 disco: ssd de 256gb.", 
         marca: "Marca 1", 
         stock: 11,
         imagen: "../img/mac.jpg"
@@ -12,17 +12,17 @@ const productos = [
     { 
         id: 2, 
         nombre: "Notebook", 
-        precio: 20, 
-        descripcion: "Esta es la descripción del producto 2.", 
+        precio: 800, 
+        descripcion: "Pantalla: de 14 pulgadas procesador: Ryzen 5 7520U 4-core Gpu de 4.3 GHz memoria: 8 GB DDR3 disco: ssd de 256gb.", 
         marca: "HP", 
         stock: 3,
         imagen: "../img/notebook.jpg"
     },
     { 
         id: 3, 
-        nombre: "Mause", 
-        precio: 30, 
-        descripcion: "Esta es la descripción del producto 3.", 
+        nombre: "Mause Logitech", 
+        precio: 200, 
+        descripcion: "Sensor: Óptico Hero 25K a 25600 dpi Es inalámbrico y posee su cable de carga <br><br><br>", 
         marca: "Logitech", 
         stock: 4,
         imagen: "../img/mause.jpg"
@@ -30,8 +30,8 @@ const productos = [
     { 
         id: 4, 
         nombre: "Teclado", 
-        precio: 40, 
-        descripcion: "Esta es la descripción del producto 4.", 
+        precio: 400, 
+        descripcion: "teclado Mecánico RGB Con teclas anti-ghost inalambrico y posee su cable de carga <br><br>", 
         marca: "Logitech", 
         stock: 2,
         imagen: "../img/teclado.jpg"                                                                                                                                      
@@ -39,8 +39,8 @@ const productos = [
     { 
         id: 5, 
         nombre: "Monitor", 
-        precio: 50, 
-        descripcion: "Esta es la descripción del producto 5.", 
+        precio: 900, 
+        descripcion: "Pantalla: de 32 pulgadas Frecuencia de actualización recomendada 60Hz 4K <br><br><br>", 
         marca: "Samsung", 
         stock: 5,
         imagen: "../img/monitor.jpg"
@@ -58,7 +58,8 @@ function mostrarProductos() {
         productoDiv.innerHTML = `
             <h3>${producto.nombre}</h3>
             <img src="${producto.imagen}" alt="${producto.nombre}">
-            <p>Precio: $${producto.precio}</p>
+            <p>${producto.descripcion}</p>
+            <p>Precio: U$S ${producto.precio}</p>
             <p>Stock: ${producto.stock}</p>
             <input type="number" id="cantidad-${producto.id}" min="1" max="${producto.stock}" value="1" onchange="validarCantidad(${producto.id})">
             <button onclick="agregarAlCarrito(${producto.id})" id="agregarBtn-${producto.id}" ${producto.stock === 0 ? 'disabled' : ''}>${producto.stock === 0 ? 'Sin Stock' : 'Agregar al Carrito'}</button>
