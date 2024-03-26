@@ -8,8 +8,8 @@ Por otro lado, una vez registrado e iniciado en el sistema el mismo dará inicio
 un carrito de compras que permite agregar, eliminar productos, verificar el valor 
 y el stock de los productos cargados en el sistema.
 
-todavia no le pude meter mucho para dejarlo lo mas acercado a la entrega final puesto
-que no tuve teimpo, igualmetne le agregue las imagenes y realice los cambios que me
+todavía no le pude meter mucho para dejarlo lo mas acercado a la entrega final puesto
+que no tuve mucho tiempo, igualmente le agregue las imágenes, descripción del producto y realice los cambios que me
 corregiste en la entrega anterior.
 
 Espero que el trabajo sea de tu agrado...
@@ -17,3 +17,4 @@ Espero que el trabajo sea de tu agrado...
 Igualmente aguardo cualquier corrección... 
 
 Saludos y linda semana :)
+
