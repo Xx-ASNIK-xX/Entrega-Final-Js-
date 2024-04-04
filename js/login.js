@@ -30,7 +30,7 @@ function validarLogin(event) {
                 // Mostrar alerta de intentos fallidos
                 Swal.fire('Inicio de sesión incorrecto. Ha superado el número máximo de intentos.').then(() => {
                     // Redirigir a otra página después de superar el número máximo de intentos
-                    window.location.href = '../pages/registro.html';
+                    window.location.href = './pages/registro.html';
                 });
             } else {
                 // Mostrar alerta de nombre de usuario o contraseña incorrectos
@@ -41,7 +41,7 @@ function validarLogin(event) {
         // Mostrar alerta de usuario no registrado
         Swal.fire('No hay ningún usuario registrado. Por favor, regístrate primero.').then(() => {
             // Redirigir a la página de registro si no hay usuarios registrados
-            window.location.href = '../pages/registro.html';
+            window.location.href = './pages/registro.html';
         });
     }
 
