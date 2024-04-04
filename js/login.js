@@ -12,23 +12,35 @@ function validarLogin(event) {
     if (storedUser) {
         const usuario = JSON.parse(storedUser);
         if (usuario.username === loginUsername && usuario.password === loginPassword) {
-            alert('¡Inicio de sesión exitoso!');
-            // Redirigir a la página de perfil o cualquier otra página después del login exitoso
-            window.location.href = '../pages/carrito.html';
+            // Mostrar alerta de inicio de sesión exitoso
+            //Swal.fire('¡Inicio de sesión exitoso!')
+            Swal.fire({
+                title: "Perfecto!",
+                text: "¡Inicio de sesión exitoso!",
+                icon: "success"
+              }).then(() => {
+                // Redirigir a la página de perfil o cualquier otra página después del inicio de sesión exitoso
+                window.location.href = '../pages/carrito.html';
+            });
         } else {
             intentosFallidos++; // Incrementar el contador de intentos fallidos
             if (intentosFallidos >= 3) {
-                alert('Inicio de sesión incorrecto. Ha superado el número máximo de intentos.');
-                // Redirigir a otra página después de superar el número máximo de intentos
-                window.location.href = '../index.html';
+                // Mostrar alerta de intentos fallidos
+                Swal.fire('Inicio de sesión incorrecto. Ha superado el número máximo de intentos.').then(() => {
+                    // Redirigir a otra página después de superar el número máximo de intentos
+                    window.location.href = '../index.html';
+                });
             } else {
-                alert('Nombre de usuario o contraseña incorrectos. Intento ' + intentosFallidos + ' de 3.');
+                // Mostrar alerta de nombre de usuario o contraseña incorrectos
+                Swal.fire('Nombre de usuario o contraseña incorrectos. Intento ' + intentosFallidos + ' de 3.');
             }
         }
     } else {
-        alert('No hay ningún usuario registrado. Por favor, regístrate primero.');
-        // Redirigir a la página de registro si no hay usuarios registrados
-        window.location.href = '../index.html';
+        // Mostrar alerta de usuario no registrado
+        Swal.fire('No hay ningún usuario registrado. Por favor, regístrate primero.').then(() => {
+            // Redirigir a la página de registro si no hay usuarios registrados
+            window.location.href = '../index.html';
+        });
     }
 
     // Limpiar el formulario de login

@@ -29,6 +29,18 @@ button {
     cursor: pointer;
 }
 
+.textoRegistro{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.link{
+    color: #2353ac;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
 label {
     font-family: Arial, sans-serif; /* Utiliza Arial como fuente principal y luego sans-serif como fuente genérica de tipo sans-serif */
 }
