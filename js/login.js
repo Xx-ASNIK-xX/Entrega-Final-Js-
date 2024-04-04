@@ -3,6 +3,7 @@ let intentosFallidos = 0; // Variable para contar los intentos fallidos de inici
 // Función para validar el inicio de sesión
 function validarLogin(event) {
     event.preventDefault();
+    console.log('La función validarLogin se está ejecutando correctamente.');
 
     const loginUsername = document.getElementById('loginUsername').value;
     const loginPassword = document.getElementById('loginPassword').value;
@@ -13,14 +14,15 @@ function validarLogin(event) {
         const usuario = JSON.parse(storedUser);
         if (usuario.username === loginUsername && usuario.password === loginPassword) {
             // Mostrar alerta de inicio de sesión exitoso
-            //Swal.fire('¡Inicio de sesión exitoso!')
+
             Swal.fire({
                 title: "Perfecto!",
                 text: "¡Inicio de sesión exitoso!",
                 icon: "success"
               }).then(() => {
-                // Redirigir a la página de perfil o cualquier otra página después del inicio de sesión exitoso
-                window.location.href = '../pages/carrito.html';
+
+                // Redirigir a la página de perfil a la pagina carrito después del inicio de sesión exitoso
+                window.location.href = './pages/carrito.html';
             });
         } else {
             intentosFallidos++; // Incrementar el contador de intentos fallidos

@@ -4,7 +4,7 @@ let productos = [];
 // Función para cargar los productos desde un archivo JSON
 async function cargarProductos() {
     try {
-        const response = await fetch('../db/db.json');
+        const response = await fetch('./db/db.json');
         productos = await response.json();
         mostrarProductos(); // Llamar a mostrarProductos después de cargar los productos
     } catch (error) {
