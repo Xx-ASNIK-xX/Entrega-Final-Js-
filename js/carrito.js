@@ -46,12 +46,12 @@ function agregarAlCarrito(id) {
     const producto = productos.find(item => item.id === id);
 
     if (!producto) {
-        alert('El producto no existe.');
+        Swal.fire('El producto no existe.', 'Verifica que cargaste', 'warning');
         return;
     }
 
     if (cantidad < 1) {
-        alert('La cantidad debe ser mayor que 0.');
+        Swal.fire('Oops','La cantidad debe ser mayor que 0.','warning');
         return;
     }
 
@@ -64,7 +64,7 @@ function agregarAlCarrito(id) {
     }, 0) + cantidad;
 
     if (cantidadTotalEnCarrito > producto.stock) {
-        alert('La cantidad seleccionada excede el stock disponible.');
+        Swal.fire('Oops','La cantidad seleccionada excede el stock disponible.','warning');
         return;
     }
 
@@ -146,7 +146,7 @@ function calcularTotalCompra() {
 function comprarProductos() {
     // Verificar si el carrito está vacío
     if (carrito.length === 0) {
-        alert('El carrito está vacío. Agrega productos antes de comprar.');
+        Swal.fire('Oops !!','El carrito está vacío. Agrega productos antes de comprar.','warning');
         return; // Salir de la función si el carrito está vacío
     }
 
@@ -154,7 +154,7 @@ function comprarProductos() {
     const totalCompra = carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
 
     // Mostrar el total de la compra
-    alert(`Total de la compra: $${totalCompra.toFixed(2)}`);
+    Swal.fire(`Total de la compra: $${totalCompra.toFixed(2)}`,'Gracias por la compra', 'success');
 
     // Lógica para procesar la compra
     carrito.forEach(producto => {
