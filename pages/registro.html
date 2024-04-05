@@ -6,31 +6,54 @@
 <title>Registro</title>
 <link rel="stylesheet" href="../css/style.css"> <!-- Ruta relativa al archivo CSS -->
 </head>
-<body>
-  
-<div class="container">
-  <h2>Registro</h2>
+<body class="LoginReg">
+    <header>
+        <!-- Contenido del encabezado si es necesario -->
+    </header>
 
-  <form id="registroForm">
-      <div>
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email">
-          <span id="emailError" class="error"></span>
-      </div>
-      <div>
-          <label for="username">Nombre de usuario:</label>
-          <input type="text" id="username" name="username">
-          <span id="usernameError" class="error"></span>
-      </div>
-      <div>
-          <label for="password">Contraseña:</label>
-          <input type="password" id="password" name="password">
-          <span id="passwordError" class="error"></span>
-      </div>
-      <button type="submit">Registrarse</button>
-  </form>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../js/registro.js"></script> <!-- Ruta relativa al archivo JS -->
+    <section class="container"> <!-- Clase para el contenedor principal -->
+            
+                <div class="screen">
+                    <div class="screen__content">
+                        <form id="registroForm" class="login">
+                            <h1 class="titulo2">Registro</h1>
+                            <div class="login__field">
+                                <label for="email"></label>
+                                <i class="login__icon fas fa-lock"></i>
+                                <input type="email" id="email" name="email" class="login__input" placeholder="Correo electrónico">
+                                <span id="emailError" class="error"></span>
+                            </div>
+                            <div class="login__field">
+                                <label for="username"></label>
+                                <i class="login__icon fas fa-lock"></i>
+                                <input type="text" id="username" name="username" class="login__input" placeholder="Nombre de usuario">
+                                <span id="usernameError" class="error"></span>
+                            </div>
+                            <div class="login__field">
+                                <label for="password"></label>
+                                <i class="login__icon fas fa-lock"></i>
+                                <input type="password" id="password" name="password" class="login__input" placeholder="Contraseña">
+                                <span id="passwordError" class="error"></span>
+                            </div>
+                            <button type="submit" class="button login__submit2">Registrarse</button>
+                        </form>
+                    </div>
+                    <div class="screen__background">
+                        <span class="screen__background__shape screen__background__shape4"></span>
+                        <span class="screen__background__shape screen__background__shape3"></span>		
+                        <span class="screen__background__shape screen__background__shape2"></span>
+                        <span class="screen__background__shape screen__background__shape1"></span>
+                    </div>		
+                </div>
+            
+       
+    </section>
+
+    <footer>
+        <!-- Contenido del pie de página si es necesario -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/registro.js"></script> <!-- Ruta relativa al archivo JS -->
 </body>
 </html>

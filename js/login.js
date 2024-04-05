@@ -41,7 +41,7 @@ function validarLogin(event) {
         // Mostrar alerta de usuario no registrado
         Swal.fire('No hay ningún usuario registrado. Por favor, regístrate primero.').then(() => {
             // Redirigir a la página de registro si no hay usuarios registrados
-            window.location.href = './pages/registro.html';
+            window.location.href = '../pages/registro.html';
         });
     }
 
