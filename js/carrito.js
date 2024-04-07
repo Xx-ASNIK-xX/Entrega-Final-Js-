@@ -85,6 +85,24 @@ function agregarAlCarrito(id) {
 
     // Calcular y mostrar el valor total de la compra
     calcularTotalCompra();
+
+    // Después de agregar el producto al carrito, llamamos a la función para actualizar la cantidad en el ícono del carrito
+    actualizarCantidadCarrito();
+}
+
+// Función para actualizar la cantidad en el ícono del carrito
+function actualizarCantidadCarrito() {
+    // Obtener el elemento HTML donde se muestra la cantidad del carrito
+    const cantidadCarritoSpan = document.getElementById("cantidadCarrito");
+
+    // Obtener la cantidad actual del carrito y convertirla a número
+    let cantidadActual = parseInt(cantidadCarritoSpan.textContent);
+
+    // Sumar 1 a la cantidad actual
+    cantidadActual += 1;
+
+    // Actualizar el contenido del elemento HTML con la nueva cantidad
+    cantidadCarritoSpan.textContent = cantidadActual.toString();
 }
 
 // Función para mostrar los productos en el carrito
@@ -113,6 +131,9 @@ function eliminarDelCarrito(index) {
 
     // Calcular y mostrar el valor total de la compra
     calcularTotalCompra();
+
+    // Después de eliminar el producto del carrito, llamamos a la función para actualizar la cantidad en el ícono del carrito
+    actualizarCantidadCarrito();
 }
 
 // Función para validar la cantidad ingresada en el input
@@ -175,6 +196,10 @@ function comprarProductos() {
     // Restablecer el valor total de la compra a cero
     const totalCompraSpan = document.getElementById("totalCompra");
     totalCompraSpan.textContent = '$0.00';
+
+    // Resetear la cantidad del carrito a cero
+    const cantidadCarritoSpan = document.getElementById("cantidadCarrito");
+    cantidadCarritoSpan.textContent = '0';
 }
 
 // Array para almacenar los productos en el carrito
@@ -184,3 +209,13 @@ let carrito = [];
 window.addEventListener("load", () => {
     mostrarProductos();
 });
+
+// Función para mostrar la cantidad de elementos en el carrito
+function mostrarCantidadCarrito() {
+    const cantidadCarritoSpan = document.getElementById("cantidadCarrito");
+    const cantidadCarrito = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    cantidadCarritoSpan.textContent = cantidadCarrito.toString();
+}
+
+// Llama a esta función cada vez que se actualice el carrito
+mostrarCantidadCarrito();

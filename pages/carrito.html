@@ -4,25 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carrito de Compras</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
+    <div class="bodyCarrito">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Historial</a></li>
+                    <li><a href="#">Supermercado</a></li>
+                    <li><a href="#">Moda</a></li>
+                    <li><a href="#">Mercado PlayGRATIS</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    
+                    <li class="icon"><a href="#"><i class="fas fa-shopping-cart"></i><span id="cantidadCarrito">0</span></a>
+                        <ul class="submenu">
+                            <li>
+                                <div class="containerCarrito">
+                                    <h3>Carrito de Compras</h3>
 
-<div class="container2">
-    <h1>Productos Disponibles</h1>
-    <div id="productos" class="productos"></div>
-    <div id="productos">
-        <h1>Carrito de Compras</h1>
-        <div id="carrito" class="carrito"></div>
-        <span id="totalCompra"></span>
-        <!-- Botón para comprar -->
-        <button onclick="comprarProductos()">Comprar</button>
+                                <div id="carrito" class="carrito"></div>
+                                <span id="totalCompra"></span>
+                                
+                                <!-- Botón para comprar -->
+                                <button onclick="comprarProductos()">Comprar</button>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="icon"><a href="#"><i class="fas fa-user"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+
+        <div class="container2">
+            
+            <h1>Productos Disponibles</h1>
+            
+            <div id="productos" class="productos"></div>
+            
+        </div>
+        
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/carrito.js"></script>
+    
     </div>
-</div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../js/carrito.js"></script>
 </body>
 </html>
