@@ -43,7 +43,12 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
+footer{
+	width: 100%;
+	background-color: #333;
+	padding-top: 120px;
 
+}
 .screen {		
 	background: linear-gradient(90deg, #7e7bb9, #7C78B8);		
 	position: relative;	
@@ -289,7 +294,7 @@ button:hover {
 	background-color: #ffffff;
     max-width: 900px;
     margin: 0 auto;
-    padding: 60px;
+    padding: 80px;
 	padding-top: 120px;
 }
 
@@ -350,7 +355,7 @@ ul {
 }
 
 li {
-    margin-right: 10px; /* Añadir un margen entre los elementos */
+    margin-right: 65px; /* Añadir un margen entre los elementos */
 }
 
 li a {
