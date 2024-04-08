@@ -47,8 +47,12 @@ footer{
 	width: 100%;
 	background-color: #333;
 	padding-top: 120px;
+	box-shadow: -1px -3px 20px 0px rgb(0 0 0 / 53%);
+	position: relative; /* Cambiado a 'relative' */
+
 
 }
+
 .screen {		
 	background: linear-gradient(90deg, #7e7bb9, #7C78B8);		
 	position: relative;	
@@ -294,7 +298,7 @@ button:hover {
 	background-color: #ffffff;
     max-width: 900px;
     margin: 0 auto;
-    padding: 80px;
+    padding: 150px;
 	padding-top: 120px;
 }
 
@@ -340,14 +344,14 @@ nav {
 	position: fixed;
 	width: 100%;
     background-color: #333;
-	height: 90px;
+	height: 88px;
+	box-shadow: -1px -3px 20px 0px rgb(0 0 0 / 53%);
 	z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
 }
 
 ul {
     list-style-type: none;
-    margin: 0 auto; /* Centrar las secciones al medio */
-    padding: 20px;
+    padding: 26px;
     overflow: hidden;
     display: flex; /* Usar flexbox para alinear los elementos */
     justify-content: center; /* Centrar las secciones al medio */
@@ -355,7 +359,13 @@ ul {
 }
 
 li {
-    margin-right: 65px; /* Añadir un margen entre los elementos */
+    margin-right: 10px; /* Añadir un margen entre los elementos */
+	margin-left:10px;
+	margin-bottom:10px;
+}
+
+#margen{
+	margin-right: 160px ;
 }
 
 li a {
@@ -368,12 +378,30 @@ li a {
 
 li a:hover {
     background-color: #7066e0;
+	border-radius:  10px 10px 0px 0px;
 	
 }
 
 .icon {
     margin-right: 10px; /* Añadir un margen entre los elementos */
+	border-radius: 100px;
+	
 }
+
+#icon2 {
+	background-color: #7066e0;
+	border-radius: 10px 10px 0px 0px;
+	
+}
+
+.icon3 :hover {
+    
+	background-color: #997aca;
+	border-radius: 20px;
+
+}
+
+
 .iconHover:hover {
 	border-radius: 20px; /* Radio de curvatura de los bordes */
 }
@@ -386,13 +414,13 @@ li a:hover {
 
 /* Añadimos estilos para el submenu */
 .submenu {
-	padding-top: 30px;
+	padding-top: 35px;
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #7066e0;
     min-width: 150px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    border-radius: 20px;
+    border-radius: 0px 10px 10px 30px;
 }
 
 .submenu li {
@@ -408,14 +436,15 @@ li a:hover {
     text-align: left;
 }
 
-.submenu li a:hover {
-	background-color: #111;
-	border-radius: 20px; /* Radio de curvatura de los bordes */
-}
 
 /* Mostramos el submenu cuando el icono es hover */
 .icon:hover .submenu {
     display: block;
+}
+
+.fa,.fas {
+    margin-right: 3px;
+
 }
 
 @media screen and (max-width: 600px) {
