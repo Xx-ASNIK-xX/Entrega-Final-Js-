@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ajusta la altura mínima del contenedor para ocupar toda la pantalla */
+    min-height: 0vh; /* Ajusta la altura mínima del contenedor para ocupar toda la pantalla */
 
 }
 
@@ -396,7 +396,7 @@ li a:hover {
 
 .icon3 :hover {
     
-	background-color: #997aca;
+	background-color: #6c45ac;
 	border-radius: 20px;
 
 }
