@@ -25,13 +25,36 @@ body {
 	background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
 	overflow-y: hidden; /* Elimina el desplazamiento vertical solo para este contenedor */
 }
-
 .container {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    min-height: 100vh; /* Ajusta la altura mínima del contenedor para ocupar toda la pantalla */
+
+}
+.containerIR {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 0vh; /* Ajusta la altura mínima del contenedor para ocupar toda la pantalla */
+    min-height: 100vh; /* Ajusta la altura mínima del contenedor para ocupar toda la pantalla */
 
+}
+
+.contenedor2 {
+	z-index: 1;
+	background-color: #333;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+	padding-top: 20px;
+}
+
+.texto {
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+	margin-left: 10px;
+	color: #FFF;
+	font-size: 60px;
+	font-weight: bold;
 }
 
 input[type="email"],
@@ -299,7 +322,7 @@ button:hover {
     max-width: 900px;
     margin: 0 auto;
     padding: 150px;
-	padding-top: 120px;
+	padding-top: 180px;
 }
 
 .productos {
@@ -319,6 +342,7 @@ button:hover {
 
 .carrito {
     margin-top: 20px;
+	margin-bottom: 10px;
     border: 1px solid #ccc;
     padding: 10px;
 	border-radius: 20px;
@@ -344,14 +368,15 @@ nav {
 	position: fixed;
 	width: 100%;
     background-color: #333;
-	height: 88px;
+	height: 151px;
 	box-shadow: -1px -3px 20px 0px rgb(0 0 0 / 53%);
 	z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
 }
 
 ul {
     list-style-type: none;
-    padding: 26px;
+    padding-left: 26px;
+	padding-right: 26px;
     overflow: hidden;
     display: flex; /* Usar flexbox para alinear los elementos */
     justify-content: center; /* Centrar las secciones al medio */
@@ -409,11 +434,12 @@ li a:hover {
 .containerCarrito{
 	border-radius: 8px; /* Radio de curvatura de los bordes */
 	background-color:#FFF;
-	padding: 10px;
+	padding: 20px;
 }
 
 /* Añadimos estilos para el submenu */
 .submenu {
+	padding-bottom: 30px;
 	padding-top: 35px;
     display: none;
     position: absolute;
