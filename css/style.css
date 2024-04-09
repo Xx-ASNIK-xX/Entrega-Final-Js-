@@ -42,7 +42,7 @@ body {
 
 .contenedor2 {
 	z-index: 1;
-	background-color: #333;
+	background-color: #282828;
     display: flex;
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: center; /* Centra horizontalmente los elementos */
@@ -68,7 +68,7 @@ input[type="password"] {
 
 footer{
 	width: 100%;
-	background-color: #333;
+	background-color: #282828;
 	padding-top: 120px;
 	box-shadow: -1px -3px 20px 0px rgb(0 0 0 / 53%);
 	position: relative; /* Cambiado a 'relative' */
@@ -367,7 +367,7 @@ button:hover {
 nav {
 	position: fixed;
 	width: 100%;
-    background-color: #333;
+    background-color: #282828;
 	height: 151px;
 	box-shadow: -1px -3px 20px 0px rgb(0 0 0 / 53%);
 	z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
