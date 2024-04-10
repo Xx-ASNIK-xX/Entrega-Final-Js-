@@ -473,6 +473,31 @@ li a:hover {
 
 }
 
+/* Estilo básico del popover */
+.popover {
+	display: none;
+	position: fixed;
+	top: 170px; /* Cambiado de bottom a top */
+	left: calc(50% - -330px);
+	transform: translateX(-50%);
+	color: #FFF;
+	text-align: center;
+	background-color: #7066e0;
+	padding: 10px 20px;
+	border-radius: 20px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .tip {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #7066e0;
+    transform: rotate(45deg);
+    top: -5px;
+    left: calc(50% - 5px); /* Posiciona la punta en el centro horizontalmente */
+    z-index: -1; /* Para que la punta esté detrás del contenido */
+}
+
 @media screen and (max-width: 600px) {
     li:not(:nth-last-child(-n+3)) {
         display: none;

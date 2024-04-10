@@ -58,10 +58,10 @@ function agregarAlCarrito(id) {
     // Verificar si la cantidad total excede el stock disponible
     const cantidadTotalEnCarrito = carrito.reduce((total, item) => {
         if (item.id === id) {
-            return total + item.cantidad;
+            return total + (item.cantidad + cantidad);
         }
-        return total;
-    }, 0) + cantidad;
+        return total + item.cantidad;
+    }, 0);
 
     if (cantidadTotalEnCarrito > producto.stock) {
         Swal.fire('Oops','La cantidad seleccionada excede el stock disponible.','warning');
@@ -69,9 +69,9 @@ function agregarAlCarrito(id) {
     }
 
     // Verificar si el producto ya está en el carrito
-    const productoEnCarrito = carrito.find(item => item.id === id);
-    if (productoEnCarrito) {
-        productoEnCarrito.cantidad += cantidad;
+    const productoEnCarritoIndex = carrito.findIndex(item => item.id === id);
+    if (productoEnCarritoIndex !== -1) {
+        carrito[productoEnCarritoIndex].cantidad += cantidad;
     } else {
         // Si el producto no está en el carrito, lo agregamos
         carrito.push({ ...producto, cantidad });
@@ -88,6 +88,33 @@ function agregarAlCarrito(id) {
 
     // Después de agregar el producto al carrito, llamamos a la función para actualizar la cantidad en el ícono del carrito
     actualizarCantidadCarrito();
+
+    // Mostrar el popover al agregar un producto al carrito
+    const popover = document.getElementById('popover');
+    popover.style.display = 'block';
+
+    // Ocultar el popover después de 3 segundos
+    setTimeout(() => {
+        popover.style.display = 'none';
+    }, 3000);
+}
+
+// Función para eliminar un producto del carrito
+function eliminarDelCarrito(index) {
+    const cantidadRestar = carrito[index].cantidad;
+    carrito.splice(index, 1); // Eliminar el producto del carrito
+
+    // Volver a mostrar el carrito actualizado
+    mostrarCarrito();
+
+    // Actualizar el estado de los botones de agregar al carrito
+    mostrarProductos();
+
+    // Calcular y mostrar el valor total de la compra
+    calcularTotalCompra();
+
+    // Restar la cantidad eliminada del ícono del carrito
+    actualizarCantidadCarrito();
 }
 
 // Función para actualizar la cantidad en el ícono del carrito
@@ -95,15 +122,13 @@ function actualizarCantidadCarrito() {
     // Obtener el elemento HTML donde se muestra la cantidad del carrito
     const cantidadCarritoSpan = document.getElementById("cantidadCarrito");
 
-    // Obtener la cantidad actual del carrito y convertirla a número
-    let cantidadActual = parseInt(cantidadCarritoSpan.textContent);
-
-    // Sumar 1 a la cantidad actual
-    cantidadActual += 1;
+    // Calcular la cantidad total de productos en el carrito
+    const cantidadTotal = carrito.reduce((total, producto) => total + producto.cantidad, 0);
 
     // Actualizar el contenido del elemento HTML con la nueva cantidad
-    cantidadCarritoSpan.textContent = cantidadActual.toString();
+    cantidadCarritoSpan.textContent = cantidadTotal.toString();
 }
+
 
 // Función para mostrar los productos en el carrito
 function mostrarCarrito() {
