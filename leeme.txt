@@ -1,6 +1,6 @@
-Hola Iara como estas?
+Hola Dani como estas?
 Espero que este bien… :)
-Para la 3ra entrega vas a visualizar lo siguiente:
+Para este final vas a visualizar lo siguiente:
 
 En principio realicé un registro sumado a un login, esto lo hice con la intención 
 de tener un acercamiento sobre la tarea de validación y autentificación de usuarios. 
@@ -8,13 +8,11 @@ Por otro lado, una vez registrado e iniciado en el sistema el mismo dará inicio
 un carrito de compras que permite agregar, eliminar productos, verificar el valor 
 y el stock de los productos cargados en el sistema.
 
-todavía no le pude meter mucho para dejarlo lo mas acercado a la entrega final puesto
-que no tuve mucho tiempo, igualmente le agregue las imágenes, descripción del producto y realice los cambios que me
-corregiste en la entrega anterior.
-
 Espero que el trabajo sea de tu agrado...
 
-Igualmente aguardo cualquier corrección...
+Desde ya para mí fue un placer tenerte como profe por todo lo aprendido y la buena onda 
+
+Igualmente aguardo por cualquier corrección...
 
 Saludos y linda semana :)
 
